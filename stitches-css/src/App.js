@@ -2,7 +2,19 @@ import "./App.css";
 import { globalStyles, styled } from "./theme";
 
 const Button = styled("button", {
-  bc: "$lime600",
+  mt: 40,
+  variants: {
+    variant: {
+      outlined: {
+        border: "1px solid $red600",
+      },
+    },
+    transparent: {
+      true: {
+        background: "transparent",
+      },
+    },
+  },
 });
 
 function App() {
@@ -11,7 +23,9 @@ function App() {
       {globalStyles()}
       <header className="App-header">
         <h1>this is an h1</h1>
-        <Button>test</Button>
+        <Button variant="outlined" transparent>
+          test
+        </Button>
       </header>
     </div>
   );

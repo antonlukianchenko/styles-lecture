@@ -1,24 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { motion } from "framer-motion";
+import { globalStyles } from "./theme";
+import Accordion from "./comp/Accordion";
 
 function App() {
   return (
     <div className="App">
+      {globalStyles()}
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: {
-              duration: 3,
-            },
-          }}
-        >
-          <h1>this is a test animation</h1>
-        </motion.div>
+        <Accordion header="open me">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae
+          consequatur facere ipsum iste neque non quaerat quibusdam rem
+          voluptatem!
+        </Accordion>
       </header>
     </div>
   );
